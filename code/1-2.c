@@ -10,12 +10,12 @@ int main(int argc, const char* argv[]) {
 
         FILE* fp = fopen(filename, "r");
         if (fp == NULL)
-            continue;
+            return 0;
 
-        while(fgets(buffer, sizeof(buffer), fp) != NULL) {
-            printf("%s", buffer);
-        }
+        fgets(buffer, sizeof(buffer), fp);
         fclose(fp);
+
+        printf("%s\n", buffer);
     }
     return 0;
 }

@@ -14,6 +14,8 @@ int main(int argc, const char* argv[]) {
         int num;
         if (sscanf(buffer, "%d", &num) == 1) {
             sum += num;
+        } else {
+            fprintf(stderr, "invalid input %s\n", buffer);
         }
     }
 
